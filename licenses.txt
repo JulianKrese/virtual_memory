@@ -1,5 +1,3 @@
-Below discusses 3 license choices and why or why not I choose them
-
 GNU GENERAL PUBLIC LICENSE:
     An open-source software license that makes the software free to use and open to anyone. It emphasises collaboration by 
     requiring software to be distributed with the source code, but also works on a large scale by requiring derivatives of 
