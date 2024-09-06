@@ -1,0 +1,13 @@
+virtual addresses:
+    Virtual addresses are being represented as 64 bit 'size_t's, and all unused bits are assumed to be 0.
+
+config.h:
+    Defines constants LEVELS and POBITS. LEVELS represents the levels in the page table, which can simply be customized by changing its value in config.h. POBITS is the amount of bits reserved for the page offset, which will be in the least significant bits of the provided virtual address. This can be customized similarly to LEVELS by simply changing its value in config.h. The default value as of right now is 1 for LEVELS and 12 for POBITS. 
+    POBITS should not be so large that the VPN's do not enough enough bits to work with for a specified level. Alternatively, LEVELS should not be so large that there are not enough bits for the VPN numbers required for the total levels. Specifically, libmlpt.a will work as intended where 1 <= LEVELS <= 6 and 4 <= POBITS <= 18. Behavior is unknown outside of these values.
+
+deallocate:
+    A function that frees all allocated pieces of the program. This includes a global array as well as every allocated page table that was
+    created using posix_memalign. This was implemented on top of the previous code by simply tracking every page that was allocated with a dynamically allocated global array ('allocated_pages') and storing the pointer to page tables within this array. When deallocate is called, it simply loops through 'allocated_pages' and deallocates each pointer to remove the posix_memalign'ed page tables. It then deallocates the global array 'allocated_pages' and will reset some values, such as ptbr to 0 and allocated_pages_count to 0.
+
+Known Limitations:
+    No known limitations as of right now that were not described above.

@@ -1,0 +1,22 @@
+Below discusses 3 license choices and why or why not I choose them
+
+GNU GENERAL PUBLIC LICENSE:
+    An open-source software license that makes the software free to use and open to anyone. It emphasises collaboration by 
+    requiring software to be distributed with the source code, but also works on a large scale by requiring derivatives of 
+    the software to comply with the license and also allows commercial distribution. It seems to be a simple, anyone-can-use
+    license that just makes sure any derivations are also equally open. I did not choose this license not because it had any 
+    flaws, but felt more complicated with more strings-attached than the other two licenses (even though those strings are 
+    just making sure the software remains open to all).
+
+Apache License, Version 2.0:
+    An open-source software license that appears to give the out the software freely as long as derivations of the software 
+    adhere to specified constaints such as including this license file themselve. It seems to be more of a "use at your own
+    risk" than the GNU GPL license, giving the software "as-is" and declaring derivations as separate from the original work. 
+    I did not choose this license not because I saw any problems with it, but it felt more undeveloped than the MIT License 
+    and with more complicated terms than the MIT License.
+
+The MIT License:
+    An open-source software license that appears to give out the software freely and with full rights to anyone who receives 
+    it in the first place. They must include the original license and the software is received "as-is". I chose this license 
+    because it felt the most straight to the point license, incorporating aspects of the other two licenses but also making it 
+    a simple transaction of a product. 
